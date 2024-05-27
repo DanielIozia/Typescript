@@ -1,77 +1,115 @@
-# Sistema di Incentivazione per le Startup
+# Project Management of Startups
 
-Questo progetto illustra un sistema di incentivazione per le startup, dove le startup possono ricevere incentivi e i cittadini possono partecipare alle attività delle startup.
+This project is a TypeScript application that simulates the management of startups, incentives, and citizen participation.
 
-## Installazione
+## Prerequisites
 
-### Prerequisiti
- Node.js installato sul tuo computer
+- [Node.js](https://nodejs.org/) installed (recommended LTS version)
+- [npm](https://www.npmjs.com/) installed (usually included with Node.js)
 
-### Passaggi per l'installazione
-1. Clona questo repository sul tuo computer utilizzando il comando: git clone <https://github.com/DanielIozia/Typescript.git>
-2. Naviga nella directory del progetto: cd Typescript
-3. Installa le dipendenze necessarie utilizzando npm: npm install
+## Installation
+
+1. **Clone the repository:**
+
+   ```
+   git clone <https://github.com/DanielIozia/Typescript.git>
+    ```
+    ```
+    cd <Typescript>
+    ```
+
+ 2. **Install dependencies:**
+
+    ```
+    npm install 
+    ```
+
+  3. **Compilation:**
+
+      ```
+      npm run build 
+      ```
+
+  4. **Execution:**
+
+      ```
+      npm start 
+      ```
 
 
-## Utilizzo
+## Syntax Verification
 
-1. **Creazione delle istanze:**
-- Vengono create istanze di startup, incentivi e cittadini utilizzando le classi fornite nel codice. Esempio:
+To verify the syntax correctness of the TypeScript code, run:
+
+```
+npm run verify
+```
+This command executes the TypeScript compiler (tsc) to check for any syntax errors without generating JavaScript files.
+
+
+## Contents
+
+The project consists of three interfaces and three classes:
+
+- **Interfaces:**
+  1. `IStartup`: Defines methods and properties to be implemented by startups.
+
+  2. `IIncentive`: Defines methods and properties to be implemented by incentives.
+
+  3. `ICitizen`: Defines methods and properties to be implemented by citizens.
+
+- **Classes:**
+  1. `Startup`: Implements the `IStartup` interface for startups.
+
+  2. `Incentive`: Implements the `IIncentive` interface for incentives
+
+  3. `Citizen`: Implements the `ICitizen` interface for citizens.
+
+
+
+## Usage
+
+1. **Creating Instances:**
+- Instances of startups, incentives, and citizens are created using the provided classes in the code. Example:
 
  ```typescript
- // Esempio di codice TypeScript per la creazione di istanze
- let startup1 = new Startup();
- startup1.nome = "startup1";
- startup1.settoreFocus = "sport";
- // Continua con gli altri attributi...
+ // Example TypeScript code for creating instances
+let startup1 = new Startup("TechStars", "Tech", "Innovates in the tech sector", "Software development");
+let cittadino1 = new Citizen("Mario", "Rossi", 30, "Football");
+let incentivo4 = new Incentive("INC101", "Startup's Incentive for istruction", 60000, "Istruction");
+// Continue with other attributes...
+
  ```
 
-2. **Assegnazione degli incentivi alle startup:**
-- Gli incentivi vengono assegnati alle startup utilizzando il metodo `assegnaAStartup` dell'oggetto incentivo.
+2. **Assigning Incentives to Startups:**
+- Incentives are assigned to startups using the `assignToStartup` method of the incentive object.
 
-3. **Ricezione degli incentivi da parte delle startup:**
-- Le startup ricevono gli incentivi utilizzando il metodo `riceviIncentivo` e visualizzando il codice identificativo dell'incentivo ricevuto.
+3. **Receiving Incentives by Startups:**
+- Startups receive incentives using the `getIncentive` method and display the identifier code of the received incentive.
 
-4. **Partecipazione dei cittadini alle attività delle startup:**
-- I cittadini possono partecipare alle attività delle startup utilizzando il metodo `partecipaAttivita` e visualizzando il nome della startup a cui partecipano.
+4. **Citizens Participating in Startup Activities:**
+- Citizens can participate in startup activities using the `partecipateActivity` method and display the name of the startup they participate in.
 
-## Contenuto
-
-Il progetto è composto da tre interfacce e tre classi:
-
-- **Interfacce:**
-  1. `IStartup`: Definisce i metodi e le proprietà che devono essere implementati dalle startup.
-  2. `IIncentivo`: Definisce i metodi e le proprietà che devono essere implementati dagli incentivi.
-  3. `ICittadino`: Definisce i metodi e le proprietà che devono essere implementati dai cittadini.
-
-- **Classi:**
-  1. `Startup`: Implementa l'interfaccia `IStartup` per le startup.
-  2. `Incentivo`: Implementa l'interfaccia `IIncentivo` per gli incentivi.
-  3. `Cittadino`: Implementa l'interfaccia `ICittadino` per i cittadini.
-
-## Esempio
+## Example
 
 ```typescript
-let startup1 = new Startup();
-startup1.nome = "startup1";
-startup1.settoreFocus = "sport";
-startup1.descrizione = "descrizione1";
-startup1.prodottiServizi = "prodottiServizi1";
+let startup1 = new Startup("TechStars", "Technology", "Innovates in the tech sector", "Software development");
+let incentive1 = new Incentive("INC123", "Incentive for technology startups", 50000, "Technology sector");
+  
+incentive1.assignToStartup(startup1);
+startup1.receiveIncentive(incentive1);
+  
+let citizen1 = new Citizen("Mario", "Rossi", 30, "Football");
+citizen1.participateActivity(startup1);
 
-let incentivo1 = new Incentivo();
-incentivo1.codiceIdentificativo = "incentivo1";
-incentivo1.descrizione = "descrizione1";
-incentivo1.valoreIncentivo = 1000;
-incentivo1.criteriEleggibilita = "criteriEleggibilita1";
-
-incentivo1.assegnaAStartup(startup1);
-startup1.riceviIncentivo(incentivo1);
 ```
 
 
 
-## Conclusioni
-L'utilizzo di TypeScript e delle interfacce permette una migliore organizzazione del codice e una maggiore chiarezza nella definizione dei requisiti e delle relazioni tra le diverse entità del sistema.
+## Conclusion
+The use of TypeScript and interfaces allows for better code organization and clearer definition of requirements and relationships between different entities of the system.
 
-Infine, il progetto è aperto a contributi esterni, quindi chiunque sia interessato è invitato a proporre miglioramenti, correzioni o nuove funzionalità per rendere il sistema ancora più efficace e versatile.
+Finally, the project is open to external contributions, so anyone interested is invited to propose improvements, corrections, or new features to make the system even more effective and versatile.
+
+
 

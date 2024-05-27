@@ -1,0 +1,25 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Questo progetto illustra un sistema di incentivazione per le startup, dove le startup possono ricevere incentivi e i cittadini possono partecipare alle attività delle startup.",
+  "main": "tempCodeRunnerFile.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielIozia/Typescript.git"
+  },
+  "author": "Daniel Iozia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielIozia/Typescript/issues"
+  },
+  "homepage": "https://github.com/DanielIozia/Typescript#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
