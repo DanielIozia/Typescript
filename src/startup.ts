@@ -5,7 +5,7 @@ export interface IStartup {
     sectorFocus: string;
     description: string;
     productsServices: string;
-    getIncentive(incentivo: IIncentive): void;
+    receiveIncentive(incentive: IIncentive): void;
     assigned: boolean;
 }
 
@@ -23,12 +23,12 @@ export class Startup implements IStartup {
       this.productsServices = productsServices;
     }
   
-    getIncentive(incentivo: IIncentive): void {
+    receiveIncentive(incentive: IIncentive): void {
         if (this.assigned) {
-            console.log("The startup " + this.name + " received the " + incentivo.ID + " incentive." );
+            console.log("The startup " + this.name + " received the " + incentive.ID + " incentive." );
         } 
         else {
-            console.log("ERROR --- The startup " + this.name + " did not received " + incentivo.ID + " incentive. --- ERROR");
+            console.log("ERROR --- The startup " + this.name + " did not received " + incentive.ID + " incentive. --- ERROR");
         }
     }
 }

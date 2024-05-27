@@ -9,12 +9,12 @@ class Startup {
         this.description = description;
         this.productsServices = productsServices;
     }
-    getIncentive(incentivo) {
+    receiveIncentive(incentive) {
         if (this.assigned) {
-            console.log("The startup " + this.name + " received the " + incentivo.ID + " incentive.");
+            console.log("The startup " + this.name + " received the " + incentive.ID + " incentive.");
         }
         else {
-            console.log("ERROR --- The startup " + this.name + " did not received " + incentivo.ID + " incentive. --- ERROR");
+            console.log("ERROR --- The startup " + this.name + " did not received " + incentive.ID + " incentive. --- ERROR");
         }
     }
 }
